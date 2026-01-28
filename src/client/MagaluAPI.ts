@@ -1,13 +1,14 @@
 import { DeliveriesResource } from "../resources/deliveries.resource";
 import { OrdersResource } from "../resources/orders.resource";
-import type { MagaluConfig } from "../types/config";
 import { HttpClient } from "./HttpClient";
 
-export class MagaluAPI {
-    private http: HttpClient;
+import type { MagaluConfig } from "../types/config";
 
-    public orders: OrdersResource;
-    public deliveries: DeliveriesResource;
+export class MagaluAPI {
+    private readonly http: HttpClient;
+
+    public readonly orders: OrdersResource;
+    public readonly deliveries: DeliveriesResource;
 
     constructor(config: MagaluConfig) {
         this.http = new HttpClient(config);

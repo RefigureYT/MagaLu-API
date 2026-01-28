@@ -1,9 +1,10 @@
 {
   "name": "@refigure/magalu-api",
+  "version": "1.0.0",
   "module": "build/index.js",
   "main": "build/index.js",
   "scripts": {
-    "dev": "bun run src/index.ts",
+    "dev": "bun run src/examples/basic.ts",
     "typecheck": "tsc --noEmit",
     "build": "tsc"
   },
