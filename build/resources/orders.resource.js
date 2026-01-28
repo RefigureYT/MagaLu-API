@@ -3,10 +3,10 @@ export class OrdersResource {
     constructor(http) {
         this.http = http;
     }
-    async getPedidoByOrder(orderId) {
+    getPedidoByOrder(orderId) {
         return this.http.get(`/seller/v1/orders/${orderId}`);
     }
-    async getListPedidos(queryParameters = {}) {
+    getListPedidos(queryParameters = {}) {
         const queryParams = new URLSearchParams();
         for (const [key, value] of Object.entries(queryParameters)) {
             if (value !== undefined) {
@@ -14,6 +14,9 @@ export class OrdersResource {
             }
         }
         const queryString = queryParams.toString();
-        return this.http.get(`/seller/v1/orders?${queryString}`);
+        const url = queryString.length > 0
+            ? `/seller/v1/orders?${queryString}`
+            : `/seller/v1/orders`;
+        return this.http.get(url);
     }
 }

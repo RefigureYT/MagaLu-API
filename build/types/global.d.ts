@@ -4,6 +4,30 @@ export type MagaluSeller = {
     id: string;
     name: string;
 };
+export type MagaluMeta = {
+    links: {
+        /** Query para próxima página (string) */
+        next?: string;
+        /** Query para página anterior (string) */
+        previous?: string;
+        /** Query para página atual (string) */
+        self: string;
+    };
+    page: {
+        /** Total de itens retornados (integer) */
+        count: number;
+        /** Quantidade de itens requeridos (integer) */
+        limit: number;
+        /** Máximo de itens a serem retornados (integer) */
+        max_limit: number;
+        /** Quantidade de itens a serem ignorados (integer) */
+        offset: number;
+    };
+};
+export type MagaluRequestResponse<T> = {
+    meta: MagaluMeta;
+    results: Array<T>;
+};
 export type MagaluAmounts = {
     commission?: {
         /** Moeda utilizada nas transações */
