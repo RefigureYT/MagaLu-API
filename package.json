@@ -20,5 +20,10 @@
   },
   "peerDependencies": {
     "typescript": "^5"
-  }
+  },
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE"
+  ]
 }
