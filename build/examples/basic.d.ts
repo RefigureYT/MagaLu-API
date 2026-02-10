@@ -1,2 +1,2 @@
-export {};
+export declare const refreshTokenFn: () => "eyJraWQiOiI25SQNf1oPTBbLdldQHoClU9geYVjDAZhoN81x7knbDZ8XUi2fWJpHurlpUIbWko_1mcLHs4ntjRfVSxILP9maIk6N1kDDiMG7qnUxDInC4YPby-fmxGcV8N58" | "TOKEN_ERRADO_DE_TESTE";
 //# sourceMappingURL=basic.d.ts.map
